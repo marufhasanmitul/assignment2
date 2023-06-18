@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'CartPage.dart';
 //Source code Follow
 main(){
   runApp(const MyApp());//Applicaton
@@ -16,253 +17,114 @@ class MyApp extends StatelessWidget{
         darkTheme: ThemeData(primarySwatch: Colors.amber),
         color: Colors.blue,
         debugShowCheckedModeBanner: false,
-        home: HomeActivity());
+        home: ProductList());
   }
 }
 
-class HomeActivity extends StatelessWidget{
+class ProductList extends StatefulWidget{
+  const ProductList({super.key});
 
-  MySnackbar(message,context){
-    ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(message))
-    );
-
+  @override
+  State<StatefulWidget> createState() {
+    return _ProductListState();
   }
+}
+class _ProductListState extends State{
+  int count=0;
+  var products=[
+    {"name":"Product 1","price":"10.00"},
+    {"name":"Product 2","price":"15.00"},
+    {"name":"Product 3","price":"20.00"},
+    {"name":"Product 4","price":"20.00"},
+    {"name":"Product 5","price":"20.00"},
+    {"name":"Product 6","price":"20.00"},
+    {"name":"Product 7","price":"20.00"},
+    {"name":"Product 8","price":"20.00"},
+    {"name":"Product 9","price":"20.00"},
+    {"name":"Product 10","price":"20.00"},
+    {"name":"Product 11","price":"20.00"},
+    {"name":"Product 12","price":"20.00"},
+    {"name":"Product 13","price":"20.00"},
+
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:Text('Photo Gallery') ,
+        title: Text('Product List'),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            children: [
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(8),
-                child: Text(
-                  'Welcome to Photo Gallery!',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: TextField(
-                  decoration: InputDecoration(
-                      prefixIcon: (IconButton(
-                          onPressed: () {}, icon: Icon(Icons.search))),
-                      hintText: 'Search...',
-                      border: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black))),
-                ),
-              ),
-              Wrap(
-                alignment: WrapAlignment.spaceBetween,
-                spacing: 20,
-                runSpacing: 20,
-                children: [
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                                color: Colors.white,width: 0
-                            )
-                        )
-                    ),
-                    onPressed: () {
-                     MySnackbar("Clicked on photo!",context);
-                    },
-                    child: Column(
-                      children: [
-                        Image.network('https://maruf136.000webhostapp.com/image/nature.jpg',
-                          height: 90,
-                          width: 100,),
-                        Text('Caption',style: TextStyle(fontSize: 20,color: Colors.black),)
-                      ],
-                    ),
-                  ),
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                                color: Colors.white,width: 0
-                            )
-                        )
-                    ),
-                    onPressed: () {
-                      MySnackbar("Clicked on photo!",context);
-                    },
-                    child: Column(
-                      children: [
-                        Image.network('https://maruf136.000webhostapp.com/image/nature.jpg',
-                          height: 90,
-                          width: 100,),
-                        Text('Caption',style: TextStyle(fontSize: 20,color: Colors.black),)
-                      ],
-                    ),
-                  ),
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                                color: Colors.white,width: 0
-                            )
-                        )
-                    ),
-                    onPressed: () {
-                      MySnackbar("Clicked on photo!",context);
-                    },
-                    child: Column(
-                      children: [
-                        Image.network('https://maruf136.000webhostapp.com/image/nature.jpg',
-                          height: 90,
-                          width: 100,),
-                        Text('Caption',style: TextStyle(fontSize: 20,color: Colors.black),)
-                      ],
-                    ),
-                  ),
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                                color: Colors.white,width: 0
-                            )
-                        )
-                    ),
-                    onPressed: () {
-                      MySnackbar("Clicked on photo!",context);
-                    },
-                    child: Column(
-                      children: [
-                        Image.network('https://maruf136.000webhostapp.com/image/nature.jpg',
-                          height: 90,
-                          width: 100,),
-                        Text('Caption',style: TextStyle(fontSize: 20,color: Colors.black),)
-                      ],
-                    ),
-                  ),
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                                color: Colors.white,width: 0
-                            )
-                        )
-                    ),
-                    onPressed: () {
-                      MySnackbar("Clicked on photo!",context);
-                    },
-                    child: Column(
-                      children: [
-                        Image.network('https://maruf136.000webhostapp.com/image/nature.jpg',
-                          height: 90,
-                          width: 100,),
-                        Text('Caption',style: TextStyle(fontSize: 20,color: Colors.black),)
-                      ],
-                    ),
-                  ),
-                  OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                            side: BorderSide(
-                                color: Colors.white,width: 0
-                            )
-                        )
-                    ),
-                    onPressed: () {
-                      MySnackbar("Clicked on photo!",context);
-                    },
-                    child: Column(
-                      children: [
-                        Image.network('https://maruf136.000webhostapp.com/image/nature.jpg',
-                          height: 90,
-                          width: 100,),
-                        Text('Caption',style: TextStyle(fontSize: 20,color: Colors.black),)
-                      ],
-                    ),
-                  ),
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child: ListView.builder(
+            itemCount: products.length,
+            itemBuilder: (context,index){
+              return ListTile(
+                title: Text("${products[index]['name']!}",style: TextStyle(fontSize: 20,), ),
+                subtitle: Text("\$ ${products[index]['price']!}"),
+                trailing: 
+                SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Text("Count : ${count}"),
+                      ElevatedButton(
+                          onPressed: (){
+                            count=count+1;
+                            setState(() {
+
+                            });
+
+                            if(count==5){
+                              showDialog(
+                                  context: context,
+                                  barrierDismissible: false,
+                                  builder: (BuildContext context){
+                                    return AlertDialog(
+                                      title: Text('Congratulations!'),
+                                      content: Text('You\'ve bought 5 ${products[index]['name']!}'),
+                                      actions: [
+                                        TextButton(
+                                          child: Text('OK'),
+                                          onPressed: () {
+                                            Navigator.of(context).pop();
+                                            count=0;
+                                          },
+                                        ),
+                                        TextButton(
+                                          child: Text('Go to Cart'),
+                                          onPressed: () {
+                                            Navigator.push(context, MaterialPageRoute(builder:(_)=>CartPage('Total Product : 5') ));
+                                            count=0;
+                                          },
+                                        ),
+
+                                      ],
+
+                                    );
+                                  }
+                              );
 
 
-                ],
-              ),
-
-              ListView(
-                primary: false,
-                shrinkWrap: true,
-                children: [
-                  SizedBox(height: 10),
-                  ListTile(
-                    title: Text(
-                      'Sample Photo 1',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                    subtitle: Text('Category 1'),
-                    leading: Icon(Icons.image),
-                    tileColor: Colors.black12,
-                    dense: true,
-                    contentPadding: EdgeInsets.symmetric(horizontal: 12),
-                  ),
-                  SizedBox(height: 10),
-                  ListTile(
-                    title: Text(
-                      'Sample Photo 1',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                    subtitle: Text('Category 1'),
-                    leading: Icon(Icons.image),
-                    tileColor: Colors.black12,
-                    dense: true,
-                    contentPadding: EdgeInsets.symmetric(horizontal: 12),
-                  ),
-                  SizedBox(height: 10),
-                  ListTile(
-                    title: Text(
-                      'Sample Photo 1',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                    subtitle: Text('Category 1'),
-                    leading: Icon(Icons.image),
-                    tileColor: Colors.black12,
-                    dense: true,
-                    contentPadding: EdgeInsets.symmetric(horizontal: 12),
-                  ),
-                ],
-              )
+                            }
 
 
-            ],
-          ),
+                          },
+                          child: Text('Buy Now')
+                      )
+                    ],
+                  ),
+                ) ,
+              );
+            }
         ),
       ),
-
-
-
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          MySnackbar("Uploaded Successfully!",context);
-        },
-        child: Icon(Icons.cloud_upload),
-
+        onPressed: (){},
+        child: Icon(Icons.shopping_cart),
       ),
-
-
-
     );
-
-
   }
 }
+
 
