@@ -1,16 +1,7 @@
-# assignment2
+01.Contract app
 
-A new Flutter project.
+![contract1](https://github.com/marufhasanmitul/assignment2/assets/87512480/9185c16a-016d-40d4-8078-3df438ec81fa)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![contract2](https://github.com/marufhasanmitul/assignment2/assets/87512480/ea8dd332-c0ea-4684-9e1f-f61fc746d9bf)
