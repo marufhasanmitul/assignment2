@@ -129,7 +129,9 @@ class HomeScreenUI extends State<HomeScreen>{
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
                 children: [
-                  Image.network(weatherData["icon"],),
+                  Image.network(weatherData["icon"],errorBuilder: (_, __, ___) {
+                    return const Icon(Icons.image, size: 32);
+                  },),
                   Text("${weatherData['temperature'].round()}°C ",style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
