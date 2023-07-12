@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'HomeScreen.dart';
+
+import 'homePage.dart';
 
 void main(){
-  runApp(MyApp() );
+  runApp(const MyApp() );
 }
 
 class MyApp extends StatelessWidget{
@@ -10,10 +12,10 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: "Assignment  9 Live test",
-      debugShowCheckedModeBanner:false,
-      home: HomeScreen(),
+    return MaterialApp(
+      title: 'Flutter App',
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
     );
   }
 }
