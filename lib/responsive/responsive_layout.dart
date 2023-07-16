@@ -5,19 +5,19 @@ import 'dimention.dart';
 class ResponsiveLayout extends StatelessWidget {
 
 
-  final Widget mobilebody;
-  final Widget desktopbody;
+  final Widget PortraitBody;
+  final Widget LandscapeBody;
 
-  const ResponsiveLayout({required this.mobilebody,required this.desktopbody});
+  const ResponsiveLayout({required this.PortraitBody,required this.LandscapeBody});
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
         builder:(context,constraints){
           if(constraints.maxWidth<mobileWidth){
-            return mobilebody;
+            return PortraitBody;
           }else{
-            return desktopbody;
+            return LandscapeBody;
           }
         }
 

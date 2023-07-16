@@ -1,5 +1,5 @@
-import 'package:assignment2/responsive/MyDesktopBody.dart';
-import 'package:assignment2/responsive/MyMobileBody.dart';
+import 'package:assignment2/responsive/Landscape.dart';
+import 'package:assignment2/responsive/Portrait.dart';
 import 'package:assignment2/responsive/responsive_layout.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +15,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:ResponsiveLayout(
-        mobilebody: MyMobileBody(),
-        desktopbody: MyDesktopBody(),
+        PortraitBody: MyPortraitBody(),
+        LandscapeBody: MyLandscapeBody(),
       ),
     );
   }

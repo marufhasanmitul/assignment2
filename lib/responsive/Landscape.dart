@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyDesktopBody extends StatefulWidget {
-  const MyDesktopBody({Key? key}) : super(key: key);
+class MyLandscapeBody extends StatefulWidget {
+  const MyLandscapeBody({Key? key}) : super(key: key);
 
   @override
-  State<MyDesktopBody> createState() => _MyDesktopBodyState();
+  State<MyLandscapeBody> createState() => _MyLandscapeBodyState();
 }
 
-class _MyDesktopBodyState extends State<MyDesktopBody> {
+class _MyLandscapeBodyState extends State<MyLandscapeBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
