@@ -42,6 +42,7 @@ class _MyPortraitBodyState extends State<MyPortraitBody> {
           Expanded(
               flex: 1,
               child: GridView.builder(
+                 itemCount: 12,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                     crossAxisSpacing: 10,
