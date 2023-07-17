@@ -12,48 +12,51 @@ class _MyPortraitBodyState extends State<MyPortraitBody> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile'),
+        title: Text("Profile"),
       ),
-      body: Column(
+      body:Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-            width: double.infinity,
-            height: 300,
-            margin:EdgeInsets.all(10),
-            child: CircleAvatar(
-              radius: 48,
-              backgroundImage: NetworkImage("https://maruf136.000webhostapp.com/image/maruf.jpeg",),
-            ),
-          ),
-          Container(
-            margin: EdgeInsets.all(10),
-            padding: EdgeInsets.all(10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Maruf Hasan",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-                SizedBox(height: 20,),
-                Text("I am Maruf Hasan Flutter Developer and I worked in Java+android,Backend Service Php And Laravel,API Creation,PhotoEditing etc",style: TextStyle(height: 1.5),),
-              ],
-            ),
-          ),
-
           Expanded(
-            child: ListView.builder(
-                itemCount:10 ,
-                itemBuilder: (context,index){
-                  return Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      height: 120,
-                      color: Colors.deepPurple[400],
+              flex: 1,
+              child: Column(
+               crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 220,
+                    height: 220,
+                    padding: EdgeInsets.all(10),
+                    child: CircleAvatar(
+                      backgroundImage: NetworkImage("https://maruf136.000webhostapp.com/image/maruf.jpeg"),
                     ),
-                  );
-                }
-            ),
-          )
+                  ),
+                  Text("Maruf Hasan",textAlign: TextAlign.center,style: TextStyle(
+                    fontWeight: FontWeight.bold,fontSize: 20
+                  ),),
+                  SizedBox(height: 10,),
+                  Text("I am Maruf Hasan Flutter Developer.This theme is Responsive.Module 10 Assignment",textAlign: TextAlign.center,)
+                ],
+              )
+          ),
+          Expanded(
+              flex: 1,
+              child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 10,
+                    mainAxisSpacing: 10
+
+                  ),
+                  itemBuilder: (BuildContext context, int index){
+                    return Container(
+                      child: Image.network("https://maruf136.000webhostapp.com/image/maruf.jpeg"),
+                    );
+                  }
+              )
+          ),
         ],
-      ),
+      ) ,
     );
   }
 }
