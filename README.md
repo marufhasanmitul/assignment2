@@ -1,6 +1,8 @@
 
-![protrate](https://github.com/marufhasanmitul/assignment2/assets/87512480/58a2b409-48cf-4603-b8d1-d846f7a7537d)
+![Screenshot_7](https://github.com/marufhasanmitul/assignment2/assets/87512480/800dd664-d579-40df-bd05-80d852436eb7)
+
+
+![Screenshot_6](https://github.com/marufhasanmitul/assignment2/assets/87512480/c0a7b40a-9a48-4adb-801f-8696830f589b)
 
 
 
-![landscap](https://github.com/marufhasanmitul/assignment2/assets/87512480/c15c6500-db96-4f5a-a353-55c871986dcd)
